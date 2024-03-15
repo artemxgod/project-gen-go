@@ -2,7 +2,7 @@
 
 ## Install
 
-> `go install github.com/artemxgod/project-gen-go`
+`go install github.com/artemxgod/project-gen-go`
 
 ## Usage
 This program creates standart layout for your golang project
