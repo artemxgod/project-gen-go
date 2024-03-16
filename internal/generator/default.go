@@ -26,7 +26,7 @@ func (ag ApiGenerator) Generate() error {
 		"scripts/run.sh":      "# Add your scripts here",
 		"cmd/api/main.go":     getMain(),
 		".gitignore":          getGitignore(),
-		".env":                "# add environment variables here",
+		".env":                "# Add environment variables here",
 	}
 
 	if err := genDirectories(directories); err != nil {
