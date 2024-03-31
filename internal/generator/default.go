@@ -18,14 +18,14 @@ func New() Generator {
 
 func (ag ApiGenerator) Generate() error {
 
-	directories := []string{"cmd/api", "pkg", "internal", "configs", "scripts"}
+	directories := []string{"pkg", "internal", "configs", "scripts"}
 
 	files := map[string]string{
 		"README.md":           getReadme(),
 		"configs/config.yaml": getConfigyaml(),
 		"configs/config.go":   getConfig(),
 		"scripts/run.sh":      "# Add your scripts here",
-		"cmd/api/main.go":     getMain(),
+		"main.go":             getMain(),
 		".gitignore":          getGitignore(),
 		".env":                "# Add environment variables here",
 		"Dockerfile":          generateDockerfile(),
@@ -178,10 +178,10 @@ func main() {
 
 func getGitignore() string {
 	content := `# Configs
-	/configs/config.yaml
+/configs/config.yaml
 	
-	# Environment 
-	/.env`
+# Environment 
+/.env`
 
 	return content
 }
