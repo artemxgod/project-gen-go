@@ -266,7 +266,7 @@ COPY . .
 RUN CGO_ENABLED=0 \
     GOOS=linux \
     GOARCH=amd64 \
-    go build -ldflags="-s -w" -o /app/main cmd/api/main.go
+    go build -ldflags="-s -w" -o /app/main main.go
 
 # Use a smaller base image for the final stage
 FROM alpine:3.19
